@@ -4,6 +4,7 @@ import ejercicio2.LongitudControlador;
 import ejercicio3.CircunferenciaController;
 import ejercicio5.ConversorHoraController;
 import ejercicio6.CounterController;
+import ejercicio7.FamiliaController;
 
 import static spark.Spark.*;
 
@@ -32,16 +33,20 @@ public class HelloSpark {
 
                     "<tr><td> contador </td><td> palabra </td><td> Ejercicio 6 </td></tr>" +
 
+                    "<tr><td> todos </td><td>  </td><td> Ejercicio 7 - todos las personas </td></tr>" +
+
+                    "<tr><td> hijos </td><td> nombre </td><td> Ejercicio 7 - Hijos de la persona </td></tr>" +
+
+                    "<tr><td> nietos </td><td> nombre </td><td> Ejercicio 7 - Nietos de la persona </td></tr>" +
+
                     "<tr><td>  </td><td> </td><td> </td></tr>" +
                     "</table>";
 
 
     public static void main(String[] args) {
         get("/", (req, res) -> doc);
-        get("/hola", (req, res) -> {
-            return "Hola Spark " + req.queryParams("nombre") +
-                    req.queryParams("apellido");
-        });
+        get("/hola", (req, res) -> "Hola Spark " + req.queryParams("nombre") +
+                req.queryParams("apellido"));
         get("/palindromo", PalindromoControlador.palindromo);
         get("/longitud", LongitudControlador.longitud);
         get("/perimetro", CircunferenciaController.perimetro);
@@ -51,5 +56,8 @@ public class HelloSpark {
         get("/restar", CalculadoraControlador.restar);
         get("/segundosahoras", ConversorHoraController.hora);
         get("/contador", CounterController.contador);
+        get("/todos", FamiliaController.todos);
+        get("/hijos", FamiliaController.hijos);
+        get("/nietos", FamiliaController.nietos);
     }
 }
