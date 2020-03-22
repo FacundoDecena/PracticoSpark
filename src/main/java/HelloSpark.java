@@ -1,4 +1,5 @@
 import Ejercicio10.PlazoFijoController;
+import ejercicio11.ArticuloController;
 import ejercicio4.CalculadoraControlador;
 import ejercicio1.PalindromoControlador;
 import ejercicio2.LongitudControlador;
@@ -71,5 +72,6 @@ public class HelloSpark {
         get("/resultados", EquipoController.partidos);
         get("/telefonos", TelefonoController.telefonos);
         get("/plazofijo", PlazoFijoController.plazoFijo);
+        get("/articulo", ArticuloController.articulo);
     }
 }
