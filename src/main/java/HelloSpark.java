@@ -1,5 +1,6 @@
 import Ejercicio10.PlazoFijoController;
 import ejercicio11.ArticuloController;
+import ejercicio12.LibroController;
 import ejercicio4.CalculadoraControlador;
 import ejercicio1.PalindromoControlador;
 import ejercicio2.LongitudControlador;
@@ -49,6 +50,10 @@ public class HelloSpark {
 
                     "<tr><td> plazofijo </td><td> monto, plazo, interes </td><td> Ejercicio 10</td></tr>" +
 
+                    "<tr><td> articulo </td><td> codigo </td><td> Ejercicio 11</td></tr>" +
+
+                    "<tr><td> libro </td><td> autor </td><td> Ejercicio 12 </td></tr>" +
+
                     "<tr><td>  </td><td>  </td><td> Ejercicio </td></tr>" +
                     "</table>";
 
@@ -73,5 +78,6 @@ public class HelloSpark {
         get("/telefonos", TelefonoController.telefonos);
         get("/plazofijo", PlazoFijoController.plazoFijo);
         get("/articulo", ArticuloController.articulo);
+        get("/libro", LibroController.libros);
     }
 }

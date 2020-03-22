@@ -27,19 +27,16 @@ public class ArticuloDAO {
     public String getProduct(String codigo){
         init();
         Gson gson = new Gson();
-        if (codigo == null){
+        if (codigo == null)
             return gson.toJson(articulos);
-        } else {
+        else {
             Articulo a = articulos.stream()
                         .filter(articulo -> codigo.equalsIgnoreCase(articulo.getCodigo()))
                         .findAny()
                         .orElse(null);
-            if (a == null){
+            if (a == null)
                 return "{\"message\":\"Codigo invalido\"}";
-            } else {
-                return gson.toJson(a);
-            }
+            return gson.toJson(a);
         }
-
     }
 }
