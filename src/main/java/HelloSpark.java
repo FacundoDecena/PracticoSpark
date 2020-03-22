@@ -5,6 +5,7 @@ import ejercicio3.CircunferenciaController;
 import ejercicio5.ConversorHoraController;
 import ejercicio6.CounterController;
 import ejercicio7.FamiliaController;
+import ejercicio8.EquipoController;
 
 import static spark.Spark.*;
 
@@ -39,6 +40,8 @@ public class HelloSpark {
 
                     "<tr><td> nietos </td><td> nombre </td><td> Ejercicio 7 - Nietos de la persona </td></tr>" +
 
+                    "<tr><td> resultados </td><td> nombre </td><td> Ejercicio 8 </td></tr>" +
+
                     "<tr><td>  </td><td> </td><td> </td></tr>" +
                     "</table>";
 
@@ -59,5 +62,6 @@ public class HelloSpark {
         get("/todos", FamiliaController.todos);
         get("/hijos", FamiliaController.hijos);
         get("/nietos", FamiliaController.nietos);
+        get("/resultados", EquipoController.partidos);
     }
 }
