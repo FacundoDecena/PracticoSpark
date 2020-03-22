@@ -1,3 +1,4 @@
+import Ejercicio10.PlazoFijoController;
 import ejercicio4.CalculadoraControlador;
 import ejercicio1.PalindromoControlador;
 import ejercicio2.LongitudControlador;
@@ -6,6 +7,7 @@ import ejercicio5.ConversorHoraController;
 import ejercicio6.CounterController;
 import ejercicio7.FamiliaController;
 import ejercicio8.EquipoController;
+import ejercicio9.TelefonoController;
 
 import static spark.Spark.*;
 
@@ -42,7 +44,11 @@ public class HelloSpark {
 
                     "<tr><td> resultados </td><td> nombre </td><td> Ejercicio 8 </td></tr>" +
 
-                    "<tr><td>  </td><td> </td><td> </td></tr>" +
+                    "<tr><td> telefonos </td><td> nombre </td><td> Ejercicio 9 </td></tr>" +
+
+                    "<tr><td> plazofijo </td><td> monto, plazo, interes </td><td> Ejercicio 10</td></tr>" +
+
+                    "<tr><td>  </td><td>  </td><td> Ejercicio </td></tr>" +
                     "</table>";
 
 
@@ -63,5 +69,7 @@ public class HelloSpark {
         get("/hijos", FamiliaController.hijos);
         get("/nietos", FamiliaController.nietos);
         get("/resultados", EquipoController.partidos);
+        get("/telefonos", TelefonoController.telefonos);
+        get("/plazofijo", PlazoFijoController.plazoFijo);
     }
 }
