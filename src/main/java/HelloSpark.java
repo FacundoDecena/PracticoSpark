@@ -1,6 +1,7 @@
 import Ejercicio10.PlazoFijoController;
 import ejercicio11.ArticuloController;
 import ejercicio12.LibroController;
+import ejercicio13.TorneoController;
 import ejercicio4.CalculadoraControlador;
 import ejercicio1.PalindromoControlador;
 import ejercicio2.LongitudControlador;
@@ -79,5 +80,6 @@ public class HelloSpark {
         get("/plazofijo", PlazoFijoController.plazoFijo);
         get("/articulo", ArticuloController.articulo);
         get("/libro", LibroController.libros);
+        get("/torneo", TorneoController.torneo);
     }
 }
