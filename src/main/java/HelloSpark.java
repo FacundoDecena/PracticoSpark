@@ -17,52 +17,93 @@ import static spark.Spark.*;
 public class HelloSpark {
     static String doc =
             "Las peticiones tienen el formato: /Metodo?parametros<br><br>" +
-                    "<table style=\"width:100%\"><tr><td><b>Metodo</b></th><td><b>Parametros</b></th><td><b>Ejercicio</b></th></tr>" +
+                    "<table style=\"width:100%;\">" +
+                    "<tr><td><b>Metodo</b></th>" +
+                    "<td><b>Parametros</b></th>" +
+                    "<td><b>Ejercicio</b></th></tr>" +
 
-                    "<tr><td>hola</td><td>nombre & apellido</td><td>Hola mundo</td></tr>" +
+                    "<tr><td style=\"border-bottom: 1px solid #ddd;\">hola</td>" +
+                    "<td style = \"border-bottom: 1px solid #ddd\">nombre & apellido</td>" +
+                    "<td style = \"border-bottom: 1px solid #ddd\">Hola mundo</td></tr>" +
 
-                    "<tr><td>palindromo</td><td>palabra</td><td>Ejercicio 1</td></tr>" +
+                    "<tr><td style=\"border-bottom: 1px solid #ddd;\">palindromo</td>" +
+                    "<td style = \"border-bottom: 1px solid #ddd\">palabra</td>" +
+                    "<td style = \"border-bottom: 1px solid #ddd\">Ejercicio 1</td></tr>" +
 
-                    "<tr><td>longitud</td><td>palabra</td><td>Ejercicio 2</td></tr>" +
+                    "<tr><td style=\"border-bottom: 1px solid #ddd;\">longitud</td>" +
+                    "<td style = \"border-bottom: 1px solid #ddd\">palabra</td>" +
+                    "<td style = \"border-bottom: 1px solid #ddd\">Ejercicio 2</td></tr>" +
 
-                    "<tr><td>perimetro</td><td>radio</td><td>Ejercicio 3 - perimetro</td></tr>" +
+                    "<tr><td style=\"border-bottom: 1px solid #ddd;\">perimetro</td>" +
+                    "<td style = \"border-bottom: 1px solid #ddd\">radio</td>" +
+                    "<td style = \"border-bottom: 1px solid #ddd\">Ejercicio 3 - perimetro</td></tr>" +
 
-                    "<tr><td>area</td><td>radio</td><td>Ejercicio 3 - area</td></tr>" +
+                    "<tr><td style=\"border-bottom: 1px solid #ddd;\">area</td>" +
+                    "<td style = \"border-bottom: 1px solid #ddd\">radio</td>" +
+                    "<td style = \"border-bottom: 1px solid #ddd\">Ejercicio 3 - area</td></tr>" +
 
-                    "<tr><td>perimetroyarea</td><td>radio</td><td>Ejercicio 3 - perimetro y area</td></tr>" +
+                    "<tr><td style=\"border-bottom: 1px solid #ddd;\">perimetroyarea</td>" +
+                    "<td style = \"border-bottom: 1px solid #ddd\">radio</td>" +
+                    "<td style = \"border-bottom: 1px solid #ddd\">Ejercicio 3 - perimetro y area</td></tr>" +
 
-                    "<tr><td>sumar</td><td>a & b </td><td>Ejercicio 4 - suma</td></tr>" +
+                    "<tr><td style=\"border-bottom: 1px solid #ddd;\">sumar</td>" +
+                    "<td style = \"border-bottom: 1px solid #ddd\">a & b </td>" +
+                    "<td style = \"border-bottom: 1px solid #ddd\">Ejercicio 4 - suma</td></tr>" +
 
-                    "<tr><td>restar</td><td>a & b </td><td>Ejercicio 4 - resta</td></tr>" +
+                    "<tr><td style=\"border-bottom: 1px solid #ddd;\">restar</td>" +
+                    "<td style = \"border-bottom: 1px solid #ddd\">a & b </td>" +
+                    "<td style = \"border-bottom: 1px solid #ddd\">Ejercicio 4 - resta</td></tr>" +
 
-                    "<tr><td> segundosahoras </td><td> segundos </td><td> Ejercicio 5 </td></tr>" +
+                    "<tr><td style=\"border-bottom: 1px solid #ddd;\"> segundosahoras </td>" +
+                    "<td style = \"border-bottom: 1px solid #ddd\"> segundos </td>" +
+                    "<td style = \"border-bottom: 1px solid #ddd\"> Ejercicio 5 </td></tr>" +
 
-                    "<tr><td> contador </td><td> palabra </td><td> Ejercicio 6 </td></tr>" +
+                    "<tr><td style=\"border-bottom: 1px solid #ddd;\"> contador </td>" +
+                    "<td style = \"border-bottom: 1px solid #ddd\"> palabra </td>" +
+                    "<td style = \"border-bottom: 1px solid #ddd\"> Ejercicio 6 </td></tr>" +
 
-                    "<tr><td> todos </td><td>  </td><td> Ejercicio 7 - todos las personas </td></tr>" +
+                    "<tr><td style=\"border-bottom: 1px solid #ddd;\"> todos </td>" +
+                    "<td style = \"border-bottom: 1px solid #ddd\"> - </td>" +
+                    "<td style = \"border-bottom: 1px solid #ddd\"> Ejercicio 7 - todos las personas </td></tr>" +
 
-                    "<tr><td> hijos </td><td> nombre </td><td> Ejercicio 7 - Hijos de la persona </td></tr>" +
+                    "<tr><td style=\"border-bottom: 1px solid #ddd;\"> hijos </td>" +
+                    "<td style = \"border-bottom: 1px solid #ddd\"> nombre </td>" +
+                    "<td style = \"border-bottom: 1px solid #ddd\"> Ejercicio 7 - Hijos de la persona </td></tr>" +
 
-                    "<tr><td> nietos </td><td> nombre </td><td> Ejercicio 7 - Nietos de la persona </td></tr>" +
+                    "<tr><td style=\"border-bottom: 1px solid #ddd;\"> nietos </td>" +
+                    "<td style = \"border-bottom: 1px solid #ddd\"> nombre </td>" +
+                    "<td style = \"border-bottom: 1px solid #ddd\"> Ejercicio 7 - Nietos de la persona </td></tr>" +
 
-                    "<tr><td> resultados </td><td> nombre </td><td> Ejercicio 8 </td></tr>" +
+                    "<tr><td style=\"border-bottom: 1px solid #ddd;\"> resultados </td>" +
+                    "<td style = \"border-bottom: 1px solid #ddd\"> nombre </td>" +
+                    "<td style = \"border-bottom: 1px solid #ddd\"> Ejercicio 8 </td></tr>" +
 
-                    "<tr><td> telefonos </td><td> nombre </td><td> Ejercicio 9 </td></tr>" +
+                    "<tr><td style=\"border-bottom: 1px solid #ddd;\"> telefonos </td>" +
+                    "<td style = \"border-bottom: 1px solid #ddd\"> nombre </td>" +
+                    "<td style = \"border-bottom: 1px solid #ddd\"> Ejercicio 9 </td></tr>" +
 
-                    "<tr><td> plazofijo </td><td> monto, plazo, interes </td><td> Ejercicio 10</td></tr>" +
+                    "<tr><td style=\"border-bottom: 1px solid #ddd;\"> plazofijo </td>" +
+                    "<td style = \"border-bottom: 1px solid #ddd\"> monto, plazo, interes </td>" +
+                    "<td style = \"border-bottom: 1px solid #ddd\"> Ejercicio 10</td></tr>" +
 
-                    "<tr><td> articulo </td><td> codigo </td><td> Ejercicio 11</td></tr>" +
+                    "<tr><td style=\"border-bottom: 1px solid #ddd;\"> articulo </td>" +
+                    "<td style = \"border-bottom: 1px solid #ddd\"> codigo </td>" +
+                    "<td style = \"border-bottom: 1px solid #ddd\"> Ejercicio 11</td></tr>" +
 
-                    "<tr><td> libro </td><td> autor </td><td> Ejercicio 12 </td></tr>" +
+                    "<tr><td style=\"border-bottom: 1px solid #ddd;\"> libro </td>" +
+                    "<td style = \"border-bottom: 1px solid #ddd\"> autor </td>" +
+                    "<td style = \"border-bottom: 1px solid #ddd\"> Ejercicio 12 </td></tr>" +
 
-                    "<tr><td>  </td><td>  </td><td> Ejercicio </td></tr>" +
+                    "<tr><td style=\"border-bottom: 1px solid #ddd;\"> torneo </td>" +
+                    "<td style = \"border-bottom: 1px solid #ddd\"> nombre </td>" +
+                    "<td style = \"border-bottom: 1px solid #ddd\"> Ejercicio 13</td></tr>" +
                     "</table>";
 
 
     public static void main(String[] args) {
         get("/", (req, res) -> doc);
         get("/hola", (req, res) -> "Hola Spark " + req.queryParams("nombre") +
-                req.queryParams("apellido"));
+                " " + req.queryParams("apellido"));
         get("/palindromo", PalindromoControlador.palindromo);
         get("/longitud", LongitudControlador.longitud);
         get("/perimetro", CircunferenciaController.perimetro);
@@ -81,5 +122,12 @@ public class HelloSpark {
         get("/articulo", ArticuloController.articulo);
         get("/libro", LibroController.libros);
         get("/torneo", TorneoController.torneo);
+        notFound(
+                "<h2>404</h2><br>Visite <a href=http://localhost:4567/>la documentacion</a> para conocer las direcciones" +
+                        " disponibles con sus respectivos parametros"
+        );
+        internalServerError(
+                "<h2>505</h2><h3>Error de servidor</h3><br> Le juro profe que en mi computadora andaba"
+        );
     }
 }

@@ -38,7 +38,7 @@ public class Familia {
         if (p != null && p.getHijos() != null){
             return gson.toJson(p.getHijos());
         } else {
-            return gson.toJson(null);
+            return "{\"message\": \"No tiene hijos o parametros invalidos\"}";
         }
     }
 
@@ -48,13 +48,13 @@ public class Familia {
         if (p != null && p.getNietos() != null){
             return gson.toJson(p.getNietos());
         } else {
-            return gson.toJson(null);
+            return "{\"message\": \"No tiene hijos o parametros invalidos\"}";
         }
     }
 
     private Persona getPersonaFromNombre(String nombre){
         for (Persona persona : familia) {
-            if (persona.getNombre().equals(nombre)) {
+            if (persona.getNombre().equalsIgnoreCase(nombre)) {
                 return persona;
             }
         }

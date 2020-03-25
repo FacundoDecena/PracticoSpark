@@ -8,6 +8,10 @@ public class CounterController {
         response.type("application/json");
         Counter c = new Counter();
         String palabra = request.queryParams("palabra");
-        return c.counter(palabra);
+        try {
+            return c.counter(palabra);
+        } catch (NullPointerException e){
+            return "Parametros invalidos";
+        }
     };
 }

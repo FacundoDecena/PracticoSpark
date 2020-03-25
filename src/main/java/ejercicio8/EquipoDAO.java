@@ -37,9 +37,12 @@ public class EquipoDAO {
         init();
         Gson gson = new Gson();
         Equipo encontrado = equipoList.stream()
-                .filter(equipo -> nombre.equals(equipo.getNombre()))
+                .filter(equipo -> nombre.equalsIgnoreCase(equipo.getNombre()))
                 .findAny()
                 .orElse(null);
+        if (encontrado == null){
+            return gson.toJson(equipoList);
+        }
         return gson.toJson(encontrado);
     }
 }

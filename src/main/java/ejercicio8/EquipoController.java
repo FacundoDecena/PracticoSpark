@@ -10,6 +10,10 @@ public class EquipoController {
         EquipoDAO t = new EquipoDAO();
         response.type("application/json");
         String nombre = request.queryParams("nombre");
-        return t.getResultadosEquipo(nombre);
+        try {
+            return t.getResultadosEquipo(nombre);
+        } catch (NullPointerException e){
+            return "{\"message\": \"Parametros invalidos\"}";
+        }
     };
 }

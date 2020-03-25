@@ -13,7 +13,7 @@ public class PlazoFijoController {
             double interes = Double.parseDouble(request.queryParams("interes"));
             PlazoFijo pf = new PlazoFijo(monto, plazo, interes);
             return pf.ganancia();
-        } catch (NumberFormatException e){
+        } catch (NumberFormatException | NullPointerException e){
             return ("{\"message\": \"Parametros invalidos\"}");
         }
 

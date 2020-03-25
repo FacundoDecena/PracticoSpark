@@ -9,6 +9,10 @@ public class TelefonoController {
         TelefonoDAO t = new TelefonoDAO();
         response.type("application/json");
         String nombre = request.queryParams("nombre");
-        return t.numeroFromNombre(nombre);
+        try {
+            return t.numeroFromNombre(nombre);
+        } catch (NullPointerException e){
+            return "{\"message\": \"Parametros invalidos\"}";
+        }
     };
 }
